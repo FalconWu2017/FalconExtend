@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Falcon.DI</name>
+    </assembly>
+    <members>
+        <member name="T:Falcon.DI.FalconDIRegisterAttribute">
+            <summary>
+            自动注册服务特性
+            </summary>
+        </member>
+        <member name="M:Falcon.DI.FalconDIRegisterAttribute.#ctor">
+            <summary>
+            默认注册到所有实现的基础接口
+            </summary>
+        </member>
+        <member name="M:Falcon.DI.FalconDIRegisterAttribute.#ctor(System.Type[])">
+            <summary>
+            注册到提供的服务类型
+            </summary>
+            <param name="type">服务类型</param>
+        </member>
+        <member name="P:Falcon.DI.FalconDIRegisterAttribute.ServiceTypes">
+            <summary>
+            注册的服务类型集合
+            </summary>
+        </member>
+        <member name="P:Falcon.DI.FalconDIRegisterAttribute.Lifetime">
+            <summary>
+            生命周期
+            </summary>
+        </member>
+        <member name="T:Falcon.DI.IServiceCollectionExtend">
+            <summary>
+            服务集合方法扩展
+            </summary>
+        </member>
+        <member name="M:Falcon.DI.IServiceCollectionExtend.UseFalconDI(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly[])">
+            <summary>
+            实现自动DI注册
+            </summary>
+            <param name="services">服务集合</param>
+        </member>
+    </members>
+</doc>
