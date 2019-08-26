@@ -42,7 +42,7 @@ namespace Falcon.ModelSP
         /// </summary>
         /// <typeparam name="T">参数模型类型</typeparam>
         /// <param name="data">参数实例</param>
-        private static IEnumerable<SqlParameter> getParams<T>(T data) {
+        public static IEnumerable<SqlParameter> getParams<T>(T data) {
             if(data == null)
                 yield break;
             foreach(var p in typeof(T).GetProperties()) {
@@ -75,7 +75,7 @@ namespace Falcon.ModelSP
         /// 获取存储过程名
         /// </summary>
         /// <typeparam name="T">参数模型</typeparam>
-        private static string getProcuderName<T>() {
+        public static string getProcuderName<T>() {
             var attr = typeof(T).GetCustomAttribute<FalconSPProcuderNameAttribute>(true);
             if(attr != null && attr is FalconSPProcuderNameAttribute pna && !string.IsNullOrEmpty(pna.ProcuderName)) {
                 return pna.ProcuderName;
