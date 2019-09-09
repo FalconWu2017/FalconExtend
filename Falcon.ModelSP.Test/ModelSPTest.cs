@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Falcon.ModelSP;
 using System.Linq;
+using Falcon.ModelSP.Test.Db;
 
 namespace Falcon.ModelSP.Test
 {
@@ -43,5 +44,18 @@ namespace Falcon.ModelSP.Test
 
         [FalconSPProcuderName("sp123")]
         class ParmModel1 { }
+
+        [TestMethod]
+        public void InMemoryDbTest() {
+            //内存数据库无法使用关系模型，测试无法进行
+            return;
+            using(var db = TestDbContext.GetDbInMemory()) {
+                var re = db.Pr_AddOne(new Pr_AddOne { A = 1 });
+                Assert.IsTrue(re != null);
+                Assert.IsTrue(re.Any());
+                var first = re.First();
+                Assert.IsTrue(first.Aa == 2);
+            }
+        }
     }
 }

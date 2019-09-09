@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace Falcon.ModelSP
@@ -26,20 +24,5 @@ namespace Falcon.ModelSP
         /// <param name="db">数据上下文</param>
         /// <param name="data">参数数据</param>
         IEnumerable<TResultType> RunSP<TPrarmType, TResultType>(DbContext db,TPrarmType data) where TResultType : class, new();
-    }
-
-    /// <summary>
-    /// 存储过程执行器实现
-    /// </summary>
-    public class FalconSPRuner:IFalconSPRuner
-    {
-        public int RunSP<TPrarmType>(DbContext db,TPrarmType data) {
-            return db.RunProcuder(data);
-        }
-
-        public IEnumerable<TResultType> RunSP<TPrarmType, TResultType>(DbContext db,TPrarmType data)
-            where TResultType : class, new() {
-            return db.RunProcuder<TPrarmType,TResultType>(data);
-        }
     }
 }
