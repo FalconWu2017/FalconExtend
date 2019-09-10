@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Falcon.AutoTableLog", "Falc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Falcon.AutoTableLog.Test", "Falcon.AutoTableLog.Test\Falcon.AutoTableLog.Test.csproj", "{D60683D5-D6F6-41EE-9627-43C34C977C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falcon.ModelSP.Test", "Falcon.ModelSP.Test\Falcon.ModelSP.Test.csproj", "{C05DEBF9-79ED-4BA9-B8D5-CAF6F8EB4A87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Falcon.ModelSP.Test", "Falcon.ModelSP.Test\Falcon.ModelSP.Test.csproj", "{C05DEBF9-79ED-4BA9-B8D5-CAF6F8EB4A87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falcon.DynamicSP", "Falcon.DynamicSP\Falcon.DynamicSP.csproj", "{83C25A9A-84B9-4146-93B8-6415B7053CB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{C05DEBF9-79ED-4BA9-B8D5-CAF6F8EB4A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C05DEBF9-79ED-4BA9-B8D5-CAF6F8EB4A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C05DEBF9-79ED-4BA9-B8D5-CAF6F8EB4A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C25A9A-84B9-4146-93B8-6415B7053CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C25A9A-84B9-4146-93B8-6415B7053CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C25A9A-84B9-4146-93B8-6415B7053CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C25A9A-84B9-4146-93B8-6415B7053CB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
